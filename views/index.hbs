@@ -1,2 +1,80 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		#map {
+			height: 560px;
+			/*width: 800px;*/
+			vertical-align: left;
+		}
+		#slider {
+			height: 70px;
+			/*width: 100%;*/
+		}
+		#sidebar {
+			overflow: scroll;
+			overflow-x: hidden;
+		}
+		html {
+			min-height: 100%;
+		}
+		body {
+			background-color: #f8f8f8;
+			min-height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div id="page" class="container pull-left">
+		<div class="row">
+			<div class="col col-md-12">
+				<div id="controls"> 
+					<!-- contains slider + advanced -->
+					<div id="slider">
+						<!-- emma's slider -->
+						<img src="http://www.clker.com/cliparts/k/O/n/2/Z/d/house-logo-teal.svg" alt="House logo" style="width:70px;height:60px;">
+					</div>
+					<div id="advanced">
+						<!-- height is 0, expands after the button is clicked, put Emma's code here -->
+					</div> <!-- advanced -->
+				</div> <!-- controls -->
+			</div> <!-- col -->
+		</div> <!-- row -->
+		<div class="row">
+			<div class="col-md-9 col">
+					<div id="map">
+						<!-- Google maps API -->
+						<script>
+							function initMap() {
+								var uluru = {lat: 44.227914, lng: -76.495608};
+								var map = new google.maps.Map(document.getElementById('map'), {
+									zoom: 15,
+									center: uluru
+								});
+								var marker = new google.maps.Marker({
+									position: uluru,
+									map: map
+								});
+							}
+						</script>
+						<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdVkDZvDHp-2kThT7LYGGX3mCwE0gnF7E&callback=initMap">
+						</script>
+				</div>
+			</div>
+		<div class="col-md-3 col">
+			<div id="sidebar">
+				<div class="house container">
+					<p>test</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
