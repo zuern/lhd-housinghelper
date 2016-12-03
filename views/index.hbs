@@ -1,6 +1,8 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
 
+<div> <!--Controls-->
+
 <script type="text/javascript">
 
 function updateRangeValue(num) {
@@ -12,7 +14,15 @@ range.innerHTML = num;
 
 </script>
 
-<div>
+<div> <!--Sidebar and Controls button-->
+
 <input type="range" name="rangeSlider" onchange="updateRangeValue(this.value)" min="0" max="10000" step="100">
 <span id="range">5000</span>
+
+</div>
+
+<button type="button">Advanced Options</button>
+<div> <!--Advanced Controls-->
+</div>
+
 </div>
