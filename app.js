@@ -4,12 +4,14 @@ var express = require('express')
   , logger = require('morgan')
   , cookieParser = require('cookie-parser')
   , bodyParser = require('body-parser')
-  , MongoClient = require('mongodb').MongoClient;
+  , MongoClient = require('mongodb').MongoClient
+  , config = require('./config')
+  , dbService = require('./services/dbService');
 
 var index = require('./routes/index')
   , users = require('./routes/users');
 
-var config = require('./config');
+
 
 var app = express();
 
