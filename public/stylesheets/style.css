@@ -1,8 +1,18 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Titillium Web', sans-serif;;
+  background-color: rgb(242, 235, 231);
+  font-size: 14px
+  color: rgb(34,23,18);
 }
 
 a {
   color: #00B7FF;
+}
+
+#website {
+	font-family: 'Montserrat Subrayada', Helvetica, sans-serif;
+	font-size: 40px;
+	background-color: rgb(82,126,144);
+	border: 5px solid #5f4236;
 }
