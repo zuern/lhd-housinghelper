@@ -1,8 +1,14 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(229, 234, 255);
 }
 
 a {
   color: #00B7FF;
+}
+
+#website {
+	font-family: 'Montserrat Subrayada', Helvetica, sans-serif;
+	font-size: 20px;
 }
