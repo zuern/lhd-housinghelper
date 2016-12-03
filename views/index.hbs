@@ -1,2 +1,18 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+
+<script type="text/javascript">
+
+function updateRangeValue(num) {
+
+var range = document.getElementById("range");
+range.innerHTML = num;
+
+}
+
+</script>
+
+<div>
+<input type="range" name="rangeSlider" onchange="updateRangeValue(this.value)" min="0" max="10000" step="100">
+<span id="range">5000</span>
+</div>
