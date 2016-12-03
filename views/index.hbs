@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html>
+<!--
+   -This is the webapp Housing Helper, designed by "House LANnister: Hear Us RAR!" for Limestone City Hacks
+   -Housing Helper was created to help Queen's students looking for housing, and improve the house hunting experience
+
+   -Authors: Brendan, Emma, Kevin, and Marissa
+   -Created: 03/12/16
+ -->
+
 
 <head>
 	<style>
@@ -8,14 +16,16 @@
 			/*width: 800px;*/
 			vertical-align: left;
 		}
-		#slider {
+		#controls {
 			height: 70px;
 			/*width: 100%;*/
 		}
+		
 		#sidebar {
 			overflow: scroll;
 			overflow-x: hidden;
 		}
+
 		html {
 			min-height: 100%;
 		}
@@ -25,19 +35,26 @@
 			margin: 0;
 			padding: 0;
 		}
+		.container-fluid {
+			width: 100%;
+		}
+		h1,
+		h2 {
+			margin-top: 0;
+		}
 	</style>
 </head>
 
 
 <body>
-	<div id="page" class="container pull-left">
+	<div id="page" class="container-fluid pull-left">
 		<div class="row">
 			<div class="col col-md-12">
 				<div id="controls"> 
 					<!-- contains slider + advanced -->
 					<div id="slider">
 						<!-- emma's slider -->
-						<img src="http://www.clker.com/cliparts/k/O/n/2/Z/d/house-logo-teal.svg" alt="House logo" style="width:70px;height:60px;">
+						<h1><font size=5><img src="http://www.clker.com/cliparts/k/O/n/2/Z/d/house-logo-teal.svg" alt="House logo" style="width:70px;height:60px;"> Housing Helper </font></h1>
 					</div>
 					<div id="advanced">
 						<!-- height is 0, expands after the button is clicked, put Emma's code here -->
@@ -46,7 +63,7 @@
 			</div> <!-- col -->
 		</div> <!-- row -->
 		<div class="row">
-			<div class="col-md-9 col">
+			<div class="col-md-7 col">
 					<div id="map">
 						<!-- Google maps API -->
 						<script>
@@ -62,18 +79,33 @@
 								});
 							}
 						</script>
-						<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdVkDZvDHp-2kThT7LYGGX3mCwE0gnF7E&callback=initMap">
+						<script async defer
+							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdVkDZvDHp-2kThT7LYGGX3mCwE0gnF7E&callback=initMap">
 						</script>
 				</div>
 			</div>
-		<div class="col-md-3 col">
-			<div id="sidebar">
-				<div class="house container">
-					<p>test</p>
+			<div class="col-md-5 col">
+				<div id="sidebar">
+					<div class="info container">
+						<div class="row">
+							<div class="col-md-2 col">
+								<div id="thumb">
+									<img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=150%C3%97150&w=150&h=150" alt="House thumbnail" style="width:150px;height:150px;">
+								</div> <!-- thumbnail -->
+							</div> <!-- thumb cols -->
+							<div class="col-md-3 col">
+								<div id="desc">
+									<h2><font size=5>Address 1</font></h2>
+									<p>Distance from campus</p>
+									<p>Description of house by lanlord/ management company: # of bedrooms, # of bathrooms, utilities, whatever they wanna write in the description.<p>
+									<p>$$$</p>
+								</div>
+							</div>
+						</div>
+					</div> <!-- info container -->
 				</div>
 			</div>
 		</div>
-	</div>
 
 </div>
 </body>
