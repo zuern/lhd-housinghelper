@@ -7,9 +7,11 @@
   },
   "dependencies": {
     "body-parser": "~1.15.2",
+    "bootstrap": "^3.3.7",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "express": "~4.14.0",
+    "fontawesome": "^4.7.0",
     "hbs": "~4.0.1",
     "mongodb": "^2.2.12",
     "morgan": "~1.7.0",
