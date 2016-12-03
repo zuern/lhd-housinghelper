@@ -5,7 +5,6 @@ var express = require('express')
   , cookieParser = require('cookie-parser')
   , bodyParser = require('body-parser')
   , MongoClient = require('mongodb').MongoClient
-  , config = require('./config')
   , dbService = require('./services/dbService');
 
 var index = require('./routes/index')
@@ -49,3 +48,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+

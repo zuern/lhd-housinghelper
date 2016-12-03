@@ -12,15 +12,26 @@ router.get('/', function(req, res, next) {
 router.get('/dbtest', function(req, res, next) {
 	//var houselist = db.getHouseList();
 	//var houselist = dbSerivice.populateDatabase();
-	//dbService.populateDatabase();
-
+	//dbService.populateDatabase();	
+  dbService.getHouseList(function(err, houseList) {
+  	if (err) {
+  		res.sendStatus(500);
+  	}
+  	else
+  	{
+  		res.json(houseList);
+  	}
+  });  
 	
-  		var houselist = dbService.getHouseList();
-  		console.log(houselist);
-  
-	
-  res.render('db', { title: 'lol'});
 });
+
+router.get('/populate',function(req, res, next){
+
+	dbService.populateDatabase();
+	res.json({status: "Populated the db"});
+
+});
+
 
 module.exports = router;
 
