@@ -1,2 +1,244 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<!DOCTYPE html>
+<html>
+<!--
+   -This is the webapp Housing Helper, designed by "House LANnister: Hear Us RAR!" for Limestone City Hacks
+   -Housing Helper was created to help Queen's students looking for housing, and improve the house hunting experience
+
+   -Authors: Brendan, Emma, Kevin, and Marissa
+   -Created: 03/12/16
+-->
+
+
+<head>
+	<style>
+		#map {
+			height: 560px;
+			/*width: 800px;*/
+			vertical-align: left;
+		}
+		
+		#sidebar {
+			overflow: scroll;
+			overflow-x: hidden;
+		}
+
+		html {
+			min-height: 100%;
+		}
+		body {
+			background-color: #f8f8f8;
+			min-height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		.container-fluid {
+			width: 100%;
+		}
+		h1,
+		h2 {
+			margin-top: 0;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div id="page" class="container-fluid pull-left">
+	<div class="row">
+		<div class="col col-md-12">
+			<h1><font size=5><img src="http://www.clker.com/cliparts/k/O/n/2/Z/d/house-logo-teal.svg" alt="House logo" style="width:70px;height:60px;"> Housing Helper </font></h1>
+		</div>		
+	</div>
+		<div class="row">
+			<div class="col col-md-12">
+				<div id="controls"> 
+					<!-- contains slider + advanced -->
+					<div id="slider">
+						<script type="text/javascript">
+
+							function updateRangeValue(num) {
+
+								var range = document.getElementById("range");
+								range.innerHTML = num;
+
+							}
+
+						</script>
+
+						<div id="sidebarAndControlsButton">
+							<p> How far from campus would you like to be (in m)? </p>
+
+							<input type="range" name="rangeSlider" onchange="updateRangeValue(this.value)" min="0" max="10000" step="100">
+							<span id="range">5000</span>
+
+						</div>
+
+						<button type="button">Advanced Options</button>
+					</div>
+				</div>
+				<div id="advanced">
+					<!-- height is 0, expands after the button is clicked, put Emma's code here -->
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> <b>Number of Rooms</b>
+						</label>
+
+						<select class="form-control">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> <b>Number of Bathrooms</b>
+						</label>
+
+						<select class="form-control">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+						</select>
+					</div>
+
+					<div>
+						<p><b>Lease Type</b></p>	
+						<select class="form-control">
+							<option>12 months</option>
+							<option>8 months</option>
+						</select>
+					</div>
+
+					<form>
+						<div class="form-group">
+							<label for="monthlyLease">Monthly Lease</label>
+							<input type="number" class="form-control" id="monthlyLease" placeholder="Amount">
+						</div>
+					</form>	
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Utilities Included
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Laundry Included
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Internet Included
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Parking Included
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Bike "Parking" Included
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Already Furnished
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<p><b> Distance from House Listing to: </b></p>
+
+						<ul>
+							<li><label>
+								<input type="checkbox"> Bus Stop
+							</label></li>
+
+							<li><label>
+								<input type="checkbox"> Grocery Store
+							</label></li>
+
+							<li><label>
+								<input type="checkbox"> Laundry
+							</label></li>
+
+							<li><label>
+								<input type="checkbox"> The LCBO
+							</label></li>
+
+							<li><label>
+								<input type="checkbox"> The Hub
+							</label></li>
+						</ul>
+					</div>
+
+					<a href="http://www.studenthousingkingston.ca/">Other Affordable Student Housing</a>
+
+					<br>
+
+					<button type="submit"> Submit </button>
+
+				</div> <!-- advanced -->
+			</div> <!-- controls -->
+		</div> <!-- col -->
+	</div> <!-- row -->
+	<div class="row">
+		<div class="col-md-7 col">
+			<div id="map">
+				<!-- Google maps API -->
+				<script>
+					function initMap() {
+						var uluru = {lat: 44.227914, lng: -76.495608};
+						var map = new google.maps.Map(document.getElementById('map'), {
+							zoom: 15,
+							center: uluru
+						});
+						var marker = new google.maps.Marker({
+							position: uluru,
+							map: map
+						});
+					}
+				</script>
+				<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdVkDZvDHp-2kThT7LYGGX3mCwE0gnF7E&callback=initMap">
+			</script>
+		</div>
+	</div>
+	<div class="col-md-5 col">
+		<div id="sidebar">
+			<div class="info container">
+				<div class="row">
+					<div class="col-md-2 col">
+						<div id="thumb">
+							<img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=150%C3%97150&w=150&h=150" alt="House thumbnail" style="width:150px;height:150px;">
+						</div> <!-- thumbnail -->
+					</div> <!-- thumb cols -->
+					<div class="col-md-3 col">
+						<div id="desc">
+							<h2><font size=5>Address 1</font></h2>
+							<p>Distance from campus</p>
+							<p>Description of house by lanlord/ management company: # of bedrooms, # of bathrooms, utilities, whatever they wanna write in the description.<p>
+								<p>$$$</p>
+							</div>
+						</div>
+					</div>
+				</div> <!-- info container -->
+			</div>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
+

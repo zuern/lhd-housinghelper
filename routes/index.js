@@ -4,15 +4,17 @@ var express = require('express')
   
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  var data = db.getHouseList();
-  res.render('index', { title: 'Local Hack Day' });
+router.get('/', function(req, res, next) { 
+  res.render('index', { title: 'Express' });
 });
 
-router.get('/dbtest', function(req, res, next) {
-	//var houselist = db.getHouseList();
-	//var houselist = dbSerivice.populateDatabase();
-	//dbService.populateDatabase();	
+router.get('/details/:id', function(req, res) {
+  var id = req.params["id"];
+  // do stuff
+  res.render('details', { title: "Details" });
+});
+
+router.post('/getHouseList', function(req, res, next) {
   dbService.getHouseList(function(err, houseList) {
   	if (err) {
   		res.sendStatus(500);
@@ -34,4 +36,3 @@ router.get('/populate',function(req, res, next){
 
 
 module.exports = router;
-
