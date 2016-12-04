@@ -131,47 +131,51 @@
 			</div> <!-- advanced -->
 		</div> <!-- controls -->
 	</div> <!-- page-controls -->
-	<div class="row">
+	<div class="main-content row">
 		<div id="map" class="col-md-7 col"></div> <!-- map -->
 		<div id="sidebar" class="col-md-5 col">
 
-			<div class="info container">
+			<div data-bind="foreach: houseList" class="info container">
 				<div class="row">
 					<div class="col-md-2 col">
 						<div id="thumb">
-							<img src="https://placeholdit.imgix.net/~text?txtsize=14&txt=150%C3%97150&w=150&h=150" alt="House thumbnail" style="width:150px;height:150px;">
+							<img data-bind="attr: { src: thumbnail }">
 						</div> <!-- thumbnail -->
 					</div> <!-- thumb cols -->
-					<div class="col-md-3 col">
-						<div id="desc">
-							<h2><font size=5>Address 1</font></h2>
-							<p>Distance from campus</p>
-							<p>Description of house by lanlord/ management company: # of bedrooms, # of bathrooms, utilities, whatever they wanna write in the description.<p>
-								<p>$$$</p>
-							</div>
+					<div class="col-md-3 col" id="desc">
+						<h2 class="info-address" data-bind="text: title"></h2>
+						<p>1300m from campus</p>
+						<p class="shortDescription" data-bind="shortDescription"><p>
+							<p>
+								<span data-bind="text: price"></span>
+								<span data-bind="text: priceInterval"></span>
+							</p>
 						</div>
 					</div>
 				</div> <!-- info container -->
 
 			</div> <!-- sidebar -->
-		</div> 
-	</div> <!-- row -->
-</div> <!-- page -->
-
-<!-- Google maps API -->
-<script>
-	function initMap() {
-		var uluru = {lat: 44.227914, lng: -76.495608};
-		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 15,
-			center: uluru
-		});
-		var marker = new google.maps.Marker({
-			position: uluru,
-			map: map
-		});
-	}
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdVkDZvDHp-2kThT7LYGGX3mCwE0gnF7E&callback=initMap" async defer>
-</script>
-<script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer></script>
+		</div> <!-- main-content -->
+		<footer class="row">
+			<div class="col col-md-7 text-right">
+				<p>Made with &#9829; by Emma, Marissa, Brendan, and Kevin</p>
+			</div>
+		</footer>
+	</div> <!-- page -->
+	<!-- Google maps API -->
+	<script>
+		function initMap() {
+			var uluru = {lat: 44.227914, lng: -76.495608};
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 15,
+				center: uluru
+			});
+			var marker = new google.maps.Marker({
+				position: uluru,
+				map: map
+			});
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdVkDZvDHp-2kThT7LYGGX3mCwE0gnF7E&callback=initMap" async defer>
+	</script>
+	<script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer></script>

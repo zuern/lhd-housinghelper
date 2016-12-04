@@ -38,7 +38,7 @@ var Application = (function(ko, $) {
     function loadData() {
       $.get("/getHouseList")
       .done(function(data) {
-        viewModel.houseList = data;
+        viewModel.houseList(data);
       })
       .fail(function() {
         console.log("Failed to fetch data from the API.");
