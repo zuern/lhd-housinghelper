@@ -10,7 +10,7 @@
 			<div id="slider" class="row">
 				<div id="sidebarAndControlsButton" class="col col-md-7">
 					<p> How far from campus would you like to be (in m)? </p>
-					<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="10000" data-slider-step="25" data-slider-value="500"/>
+					<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="5000" data-slider-step="25" data-slider-value="2500"/>
 				</div>
 				<div class="col col-md-5">
 					<a class="btn btn-md btn-primary pull-right" id="toggle">Advanced Options <i class="fa fa-caret-down"></i></a>
@@ -140,15 +140,17 @@
 							<img data-bind="attr: { src: thumbnail }">
 						</div> <!-- thumbnail -->
 					</div> <!-- thumb cols -->
-					<div class="col-md-3 col" id="desc">
-						<h2 class="info-address" data-bind="text: title"></h2>
-						<p class="distance">1300m from campus</p>
-						<p class="shortDescription" data-bind="text: shortDescription"><p>
-							<p class="price">
-								<i class="fa fa-usd"></i><i class="fa fa-usd"></i><i class="fa fa-usd"></i>
-								<span data-bind="text: price"></span>
-								<span data-bind="text: priceInterval"></span>
-							</p>
+					<div class="col-md-3 col">
+						<div id="desc">
+							<h2 class="info-address" data-bind="text: title"></h2>
+							<p class="distance">1300m from campus</p>
+							<p class="shortDescription" data-bind="text: shortDescription"><p>
+								<p class="price">
+									<i class="fa fa-usd"></i><i class="fa fa-usd"></i><i class="fa fa-usd"></i>
+									<span data-bind="text: price"></span>
+									<span>Per month</span>
+								</p>
+							</div>
 						</div>
 					</div>
 				</div> <!-- info container -->

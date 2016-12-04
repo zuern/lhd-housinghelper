@@ -74,3 +74,8 @@ h2 {
 #ex1Slider .slider-selection {
   background: #BABABA;
 }
+
+#desc {
+  max-width: 100%;
+  padding-right: 25px;
+}
