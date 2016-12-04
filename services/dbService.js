@@ -37,9 +37,9 @@ function populateDatabase(){
 var collection = db.collection('houses');
 var data1 = {
         title: "64 Wolfe Street",
-        thumbnail: "public/images/img1.JPG",
-        images: ["public/images/img12.JPG","public/images/img13.JPG","public/images/img14.JPG"],
-        shortDescription: faker.lorem.words(),
+        thumbnail: "images/img1.JPG",
+        images: ["images/img12.JPG","images/img13.JPG","images/img14.JPG"],
+        shortDescription: "January, May, or September lease start: Seeking quiet studious female students (no partying in the home) for large cute and feminine bedrooms",
         longDescription: faker.lorem.words(),
         price: faker.finance.amount(),
         priceInterval: faker.lorem.words(),
@@ -58,9 +58,9 @@ var data1 = {
       }
 var data2 = {
          title: "Fully Renovated 3 Bedroom House in the vicinity of McBurney Park",
-        thumbnail: "public/images/img2.JPG" ,
-        images: ["public/images/img22.JPG","public/images/img23.JPG","public/images/img24.JPG"],
-        shortDescription: faker.lorem.words(),
+        thumbnail: "images/img2.JPG" ,
+        images: ["images/img22.JPG","images/img23.JPG","images/img24.JPG"],
+        shortDescription: "Room for rent to a student or full time worker. Room is furnished, close to rennadale plaza, 5min to st.lawrance and 10min to queens and downtown. Internet included! Move in ready! No smoking, no…",
         longDescription: faker.lorem.words(),
         price: faker.finance.amount(),
         priceInterval: faker.lorem.words(),
@@ -79,9 +79,9 @@ var data2 = {
       }
 var data3 = {
         title: "Tanner Drive - 3 Bedroom Townhome for Rent",
-        thumbnail: "public/images/img3.JPG",
-        images: ["public/images/img32.JPG","public/images/img33.JPG","public/images/img34.JPG"],
-        shortDescription: faker.lorem.words(),
+        thumbnail: "images/img3.JPG",
+        images: ["images/img32.JPG","images/img33.JPG","images/img34.JPG"],
+        shortDescription: "AVAILABLE JAN 1/17 - Room rental available in a 5 bedroom home! Located on a quiet street near St. Lawrence College and Queens University, West Campus, and walking distance to main Kingston Transit…",
         longDescription: faker.lorem.words(),
         price: faker.finance.amount(),
         priceInterval: faker.lorem.words(),
@@ -100,9 +100,9 @@ var data3 = {
       }
 var data4 = {
         title: "ATTN Students - Close to Queens - Available May 1st - 27 Main St",
-        thumbnail: "public/images/img4.JPG",
-        images: ["public/images/img42.JPG","public/images/img43.JPG","public/images/img44.JPG"],
-        shortDescription: faker.lorem.words(),
+        thumbnail: "images/img4.JPG",
+        images: ["images/img42.JPG","images/img43.JPG","images/img44.JPG"],
+        shortDescription: "Beautiful room in a large 4 bedroom house all utilities included available immediately Bayridge area $500",
         longDescription: faker.lorem.words(),
         price: faker.finance.amount(),
         priceInterval: faker.lorem.words(),
@@ -121,9 +121,9 @@ var data4 = {
       }
 var data5 = {
         title: "4-Bedroom House Steps From Campus (for winter term or May 2017)",
-        thumbnail: "public/images/img5.JPG",
-        images: ["public/images/img52.JPG","public/images/img53.JPG","public/images/img54.JPG"],
-        shortDescription: faker.lorem.words(),
+        thumbnail: "images/img5.JPG",
+        images: ["images/img52.JPG","images/img53.JPG","images/img54.JPG"],
+        shortDescription: "Beautiful, Extremely clean room in Bayridge , Lincoln Dr.ive/Bayridge Drive Furnished room/non furnished, all hardwood, no carpet, all inclusive including internet.Washer /Dryer, near Bus stop.…",
         longDescription: faker.lorem.words(),
         price: faker.finance.amount(),
         priceInterval: faker.lorem.words(),
