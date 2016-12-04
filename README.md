@@ -1,6 +1,8 @@
 # Local Hack Day Housing Helper
 A simple web app designed to help Queen's students find housing.
 
+![Housing Helper Screenshot](housinghelper.png)
+
 ## Installation
 
 ```
