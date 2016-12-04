@@ -8,11 +8,11 @@
 		<div id="controls" class="col col-md-12"> 
 			<!-- contains slider + advanced -->
 			<div id="slider" class="row">
-				<div id="sidebarAndControlsButton" class="col col-md-10">
+				<div id="sidebarAndControlsButton" class="col col-md-7">
 					<p> How far from campus would you like to be (in m)? </p>
-					<input type="range" name="rangeSlider" min="0" max="10000" step="100">
+					<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="10000" data-slider-step="25" data-slider-value="500"/>
 				</div>
-				<div class="col col-md-2">
+				<div class="col col-md-5">
 					<a class="btn btn-md btn-primary" id="toggle">Advanced Options <i class="fa fa-caret-down"></i></a>
 				</div>
 			</div>
@@ -123,11 +123,9 @@
 					</ul>
 				</div>
 
-				<a href="http://www.studenthousingkingston.ca/">Other Affordable Student Housing</a>
-					<button type="submit" class="btn btn-submit btn-primary"> Submit </button>
+				<p><a href="http://www.studenthousingkingston.ca/">Other Affordable Student Housing</a></p>
+				<button type="submit" class="btn btn-submit btn-primary pull-right"> Submit </button>
 				<br>
-
-				<button type="submit"> Submit </button>
 			</div> <!-- advanced -->
 		</div> <!-- controls -->
 	</div> <!-- page-controls -->
@@ -164,19 +162,7 @@
 		</footer>
 	</div> <!-- page -->
 	<!-- Google maps API -->
-	<script>
-		function initMap() {
-			var uluru = {lat: 44.227914, lng: -76.495608};
-			var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 15,
-				center: uluru
-			});
-			var marker = new google.maps.Marker({
-				position: uluru,
-				map: map
-			});
-		}
-	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdVkDZvDHp-2kThT7LYGGX3mCwE0gnF7E&callback=initMap" async defer>
-	</script>
 	<script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="https://cdn.jsdelivr.net/bootstrap-slider/9.5.3/bootstrap-slider.min.js" integrity="sha256-kPeeHHjF5O/nXuHuCjJCxIiOvdyW5UHeKzd2qon3oAw=" crossorigin="anonymous"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdVkDZvDHp-2kThT7LYGGX3mCwE0gnF7E&callback=Application.initMap" async defer>
+	</script>
