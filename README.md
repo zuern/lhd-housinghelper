@@ -5,12 +5,6 @@ A simple web app designed to help Queen's students find housing.
 
 ## Installation
 
-```
-git clone https://github.com/Propheis/lhd-housinghelper.git
-cd lhd-housinghelper
-npm install
-```
-
 You'll need to have mongodb installed on your computer.
 
 ```
@@ -20,7 +14,11 @@ mongod --dbpath=mongodata --port 27017
 ```
 
 In a different terminal, run
+
 ```
+git clone https://github.com/Propheis/lhd-housinghelper.git
+cd lhd-housinghelper
+npm install
 npm start
 ```
 and visit `http://localhost:3000`, followed by `http://localhost:3000/`.
