@@ -14,7 +14,7 @@ router.get('/details/:id', function(req, res) {
   res.render('details', { title: "Details" });
 });
 
-router.post('/getHouseList', function(req, res, next) {
+router.get('/getHouseList', function(req, res, next) {
   dbService.getHouseList(function(err, houseList) {
   	if (err) {
   		res.sendStatus(500);

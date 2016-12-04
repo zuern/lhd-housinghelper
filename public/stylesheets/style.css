@@ -16,3 +16,52 @@ a {
 	background-color: rgb(82,126,144);
 	border: 5px solid #5f4236;
 }
+#map {
+  height: 560px;
+  /*width: 800px;*/
+  vertical-align: left;
+}
+
+#sidebar {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 550px;
+}
+
+html {
+  min-height: 100%;
+}
+body {
+  background-color: #f8f8f8;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.container-fluid {
+  width: 100%;
+}
+h1,
+h2 {
+  margin-top: 0;
+}
+
+.info-address {
+  font-size: 25px;
+}
+
+#thumb img {
+  max-width:150px;
+}
+
+#sidebar .row {
+  padding: 15px 0;
+}
+
+.price {
+  font-style: italic;
+}
+
+.distance {
+  font-style: italic;
+  margin-top: -7px;
+}
