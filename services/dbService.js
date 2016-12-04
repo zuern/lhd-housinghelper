@@ -36,7 +36,7 @@ function populateDatabase(){
 
 var collection = db.collection('houses');
 var data1 = {
-        title: faker.name.findName(),
+        title: "64 Wolfe Street",
         thumbnail: faker.image.image(),
         images: [faker.image.image(),faker.image.image(),faker.image.image()],
         shortDescription: faker.lorem.words(),
@@ -57,7 +57,7 @@ var data1 = {
         hasInternetIncluded: faker.lorem.words()
       }
 var data2 = {
-        title: faker.name.findName(),
+        title: "Fully Renovated 3 Bedroom House in the vicinity of McBurney Park",
         thumbnail: faker.image.image(),
         images: [faker.image.image(),faker.image.image(),faker.image.image()],
         shortDescription: faker.lorem.words(),
@@ -78,7 +78,7 @@ var data2 = {
         hasInternetIncluded: faker.lorem.words()
       }
 var data3 = {
-        title: faker.name.findName(),
+        title: "Tanner Drive - 3 Bedroom Townhome for Rent",
         thumbnail: faker.image.image(),
         images: [faker.image.image(),faker.image.image(),faker.image.image()],
         shortDescription: faker.lorem.words(),
@@ -99,7 +99,7 @@ var data3 = {
         hasInternetIncluded: faker.lorem.words()
       }
 var data4 = {
-        title: faker.name.findName(),
+        title: "ATTN Students - Close to Queens - Available May 1st - 27 Main St",
         thumbnail: faker.image.image(),
         images: [faker.image.image(),faker.image.image(),faker.image.image()],
         shortDescription: faker.lorem.words(),
@@ -120,7 +120,7 @@ var data4 = {
         hasInternetIncluded: faker.lorem.words()
       }
 var data5 = {
-        title: faker.name.findName(),
+        title: "4-Bedroom House Steps From Campus (for winter term or May 2017)",
         thumbnail: faker.image.image(),
         images: [faker.image.image(),faker.image.image(),faker.image.image()],
         shortDescription: faker.lorem.words(),

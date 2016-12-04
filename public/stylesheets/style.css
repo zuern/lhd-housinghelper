@@ -65,3 +65,12 @@ h2 {
   font-style: italic;
   margin-top: -7px;
 }
+
+#ex1Slider {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+#ex1Slider .slider-selection {
+  background: #BABABA;
+}
