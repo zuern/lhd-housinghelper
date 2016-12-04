@@ -25,6 +25,7 @@ a {
 #sidebar {
   overflow: scroll;
   overflow-x: hidden;
+  height: 550px;
 }
 
 html {
@@ -46,4 +47,21 @@ h2 {
 
 .info-address {
   font-size: 25px;
+}
+
+#thumb img {
+  max-width:150px;
+}
+
+#sidebar .row {
+  padding: 15px 0;
+}
+
+.price {
+  font-style: italic;
+}
+
+.distance {
+  font-style: italic;
+  margin-top: -7px;
 }
