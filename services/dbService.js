@@ -31,6 +31,9 @@ function populateDatabase(){
     return;
   }
 
+
+
+
 var collection = db.collection('houses');
 var data1 = {
         title: faker.name.findName(),
@@ -43,7 +46,7 @@ var data1 = {
         leaseType: faker.lorem.words(),
         landLordName: faker.name.findName(),
         latitude: String(44.228646 + (Math.random()*0.0005)),
-        longitude: String(-76.502897 + (Math.random()*0.000.5)),
+        longitude: String(-76.502897 + (Math.random()*0.0005)),
         laundry: faker.lorem.words(),
         includedUtilities: [faker.lorem.words(),faker.lorem.words()],
         isFurnished: faker.lorem.words(),
@@ -85,7 +88,7 @@ var data3 = {
         leaseType: faker.lorem.words(),
         landLordName: faker.name.findName(),
         latitude: String(44.228646 + (Math.random()*0.0005)),
-        longitude: String(-76.502897 + (Math.random()*0.0.0005)),
+        longitude: String(-76.502897 + (Math.random()*0.0005)),
         laundry: faker.lorem.words(),
         includedUtilities: [faker.lorem.words(),faker.lorem.words()],
         isFurnished: faker.lorem.words(),
@@ -164,33 +167,9 @@ function getHouseList(callback) {
 }
 
 
-  function insertHouse(){
-
-
-
-
-    db.collection('houses').insert();
-
-
-
-  }
-
-
-
-  
-  function getHouse(id) {
-
-
-
-
-    return db.collection('houses').find({_id:id});
-
-
-  }
 
   module.exports = {
     getHouseList: getHouseList,
-    getHouse: getHouse,
     populateDatabase: populateDatabase
 
   };
