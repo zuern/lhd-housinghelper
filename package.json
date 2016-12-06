@@ -15,8 +15,8 @@
     "fontawesome": "^4.7.0",
     "hbs": "~4.0.1",
     "knockout": "^3.4.1",
-    "mongodb": "^2.2.12",
     "morgan": "~1.7.0",
+    "nano": "^6.2.0",
     "serve-favicon": "~2.3.0"
   }
 }

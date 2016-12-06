@@ -1,5 +1,7 @@
 # App data
 data/
+# Enviroment specific configurations
+config.js
 
 # Logs
 logs
