@@ -28,6 +28,19 @@ a {
   height: 550px;
 }
 
+#sidebar .row {
+  padding: 15px 0;
+}
+
+#sidebar .info .row {
+  padding-top: 0;
+}
+
+#slider {
+  display:flex;
+  align-items: flex-end;
+}
+
 body {
   background-color: #f8f8f8;
   min-height: 100%;
@@ -46,10 +59,6 @@ h2 {
 
 #thumb img {
   max-width:150px;
-}
-
-#sidebar .row {
-  padding: 15px 0;
 }
 
 .price {
