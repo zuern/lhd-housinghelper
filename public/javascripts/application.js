@@ -17,8 +17,6 @@ var Application = (function(ko, $) {
       loadData();
       viewModel = new ViewModel();
       ko.applyBindings(viewModel);
-
-      
     }
 
     function initMap() {
@@ -60,23 +58,17 @@ var Application = (function(ko, $) {
      * Populate the View Model with data from the API
      */
      function loadData() {
-      $.get("/getHouseList")
+      $.get("/getUnitList")
       .done(function(data) {
-        var fixedData = data;
-
-        fixedData.forEach(function(house) {
-          house.coordinates = {
-            lat: parseFloat(house.latitude),
-            lng: parseFloat(house.longitude)
-          };
+        data.forEach(function(unit) {
           var marker = new google.maps.Marker({
-            position: house.coordinates,
-            title: house.title
+            position: unit.location,
+            title: unit.title
           });
           marker.setMap(map);
         });
 
-        viewModel.houseList(fixedData);
+        viewModel.houseList(data);
       })
       .fail(function() {
         console.log("Failed to fetch data from the API.");

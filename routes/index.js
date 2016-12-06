@@ -14,24 +14,18 @@ router.get('/details/:id', function(req, res) {
   res.render('details', { title: "Details" });
 });
 
-router.get('/getHouseList', function(req, res, next) {
-  dbService.getHouseList(function(err, houseList) {
-  	if (err) {
-  		res.sendStatus(500);
-  	}
-  	else
-  	{
-  		res.json(houseList);
-  	}
-  });  
-	
+router.get('/getUnitList', function(req, res, next) {
+  dbService.getUnitList(function(err, houseList) {
+    if (err)
+      res.sendStatus(500);
+    else
+      res.json(houseList);
+  });
 });
 
 router.get('/populate',function(req, res, next){
-
-	dbService.populateDatabase();
-	res.json({status: "Populated the db"});
-
+  dbService.populateDatabase();
+  res.json({status: "Populated the db"});
 });
 
 
