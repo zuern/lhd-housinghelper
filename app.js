@@ -4,7 +4,8 @@ var express = require('express')
   , logger = require('morgan')
   , cookieParser = require('cookie-parser')
   , bodyParser = require('body-parser')
-  , dbService = require('./services/dbService');
+  , dbService = require('./services/dbService')
+  , hbs = require('hbs');
 
 var index = require('./routes/index')
   , users = require('./routes/users');
@@ -14,6 +15,7 @@ var index = require('./routes/index')
 var app = express();
 
 // view engine setup
+hbs.registerPartials(__dirname + '/views/partials');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
